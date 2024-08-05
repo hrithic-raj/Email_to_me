@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="sendmail.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "kS3Ex76vbahD9b9Ip",
+            });
+        })();
+    </script>
+</head>
+<body>
+    <div class="container mt-5 bg-light">
+        <div class="row">
+            <div class="col-md-5 p-5 bg-primary text-white">
+                <h4>Hello there..</h4>
+            </div>
+            <div class="col-md-5 py-4">
+                <div class="form-group">
+                    <h5 for = "name">Name</h5>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your Name : ">
+                </div>
+                <div class="form-group">
+                    <h5 for = "email">Email</h5>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your email : ">
+                </div>
+                <div class="form-group">
+                    <h5 for ="message">Message</h5>
+                    <textarea name="" id="message" rows="3" class="form-control"></textarea>
+                </div>
+                <button class="btn btn-success" onclick="sendMail()">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
